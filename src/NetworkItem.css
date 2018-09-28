@@ -1,0 +1,48 @@
+div.NetworkItem{
+    box-sizing: border-box;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    margin: 5px;
+    width: 95%;
+}
+
+div.NetworkItem:hover{
+    background-color: orange;
+}
+
+button.DisconnectButton, button.ConnectButton, p.NetworkText,  p.ConnectText{
+    margin: 5px;
+    display: inline-block;
+}
+
+
+p.NetworkText{
+    width: 150px;
+}
+
+button.DisconnectButton, button.ConnectButton{
+    width: auto;
+    background-color: lightblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    border-radius: 2px;
+  }
+ 
+
+  p.ConnectText{
+    color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+  }
+
+  progress.connectProgress
+  {
+    width: 70px;
+    float: right;
+    margin: 5px;
+  }

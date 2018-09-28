@@ -1,10 +1,14 @@
+div {
+  display: block;
+}
+
 .App {
   text-align: left;
 }
 
+
 .App-logo {
-  animation: App-logo-spin 1s 1s linear;
-  left: 80%;
+  animation: App-logo-spin 1s infinite  alternate;
 }
 
 .App-header {
@@ -15,8 +19,13 @@
 }
 
 .App-title {
-  font-size: 1.8em;
-  text-align: center
+  text-align: center;
+  font-family: 'Open Sans';
+  color: #292929;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 61px;
 }
 
 .App-intro {
@@ -24,12 +33,13 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: translate(80%); }
-  to { transform: translate(20%); }
+  from { transform: translate(0,40%); }
+  to { transform: translate(0,50%); }
 }
 
 .App-separator {
   box-sizing: border-box;
+  position: relative;
 }
 
 .Color-header-desktop {
@@ -37,6 +47,90 @@
   padding-bottom: 20px;
 }
 
+.Color-header-desktop::before {
+  box-shadow: inset 0 6px 3px -3px rgba(0,0,0,0.1);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  box-sizing: border-box;
+}
+
 .Center {
   padding-top: 22px;
+}
+
+.Center::before, .Center::after {
+  content: " ";
+  display: table;
+}
+
+.MainDiv {
+  width: 100%;
+}
+
+.CenterringDiv {
+  width: 460px;
+  align-content: center;
+  margin: auto;
+}
+
+.SearchProgress{
+  display: block; /* default: inline-block */
+  width: 420px;
+  height: 20px;
+  margin: 10px auto;
+  padding: 3px;
+  border-radius: 50px;
+  appearance: none;
+  -webkit-appearance: progress-bar;
+}
+
+
+.SearchProgress::-webkit-progress-bar {
+  padding: 2px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.SearchProgress::-webkit-progress-value {
+
+  background-color: lightblue;
+  border-radius: 50px;
+}
+
+.SearchButton{
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.SearchButton:hover{
+  border: 1px solid orange;
+  border-radius: 2px;
+}
+
+.NetworkListBox
+{
+  align-self: center;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: none;
+  max-height: 900px;
 }
